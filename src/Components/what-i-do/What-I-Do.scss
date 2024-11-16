@@ -76,9 +76,6 @@
 
         }
 
-        
-
-
         .centre-circle-container {
             position: absolute;
             width: 86vw;
@@ -91,8 +88,103 @@
             justify-content: center;
             align-items: flex-start;
             overflow: hidden;
+            perspective: 400px;
+            z-index: 1;
 
-            .middle-circle{
+            .trapezoid-style {
+                position: absolute;
+                width: 14vw;
+                height: 35vw;
+                background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(36, 36, 36, 0.499124649859944) 100%);
+                z-index: 1;
+                transform-style: preserve-3d;
+                transform: rotateX(-55deg);
+                transition: 0.1s ease-in-out;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                &:hover {
+                    background: linear-gradient(0deg, #B2FF00 0%, #B2FF00 100%);
+
+                }
+            }
+
+
+            .trapezoid-inner-text-style {
+                position: absolute;
+                font-family: "Michroma", sans-serif;
+                margin-left: 0.5em;
+                color: #fff;
+                z-index: 2;
+                font-size: 1.2rem;
+                text-shadow: 1px 1px 2px #00000059
+            }
+
+            .ui-enhancement-main {
+                @extend .trapezoid-style;
+                width: 18vw;
+                transform: rotateX(-60deg) rotateZ(-40deg);
+                top: 10vw;
+                right: 55vw;
+            }
+
+            .ui-enhancement-text {
+                @extend .trapezoid-inner-text-style;
+                transform: rotate(-55deg);
+                top: 20vw;
+                left: 7vw;
+               
+            }
+
+            .creative-problem-main {
+                @extend .trapezoid-style;
+                width: 12vw;
+                transform: rotateX(-65deg) rotateZ(-16deg);
+                top: 2vw;
+                right: 44vw;
+
+            }
+
+            .creative-problem-text {
+                @extend .trapezoid-inner-text-style;
+                transform: rotate(-20deg);
+                top: 5vw;
+                left: 24vw;
+
+            }
+
+            .growth-focused-main {
+                @extend .trapezoid-style;
+                width: 14vw;
+                transform: rotateX(-55deg) rotateZ(16deg);
+                top: 0vw;
+                right: 26vw;
+            }
+
+            .growth-focused-text {
+                @extend .trapezoid-inner-text-style;
+                transform: rotate(22deg);
+                top: 6vw;
+                left: 49vw;
+            }
+
+            .deadline-commitment-main {
+                @extend .trapezoid-style;
+                width: 14vw;
+                transform: rotateX(-55deg) rotateZ(45deg);
+                top: 15vw;
+                right: 20vw;
+            }
+
+            .deadline-commitment-text {
+                @extend .trapezoid-inner-text-style;
+                transform: rotate(58deg);
+                top: 20.5vw;
+                left: 68vw;
+            }
+
+            .middle-circle {
                 position: absolute;
                 width: 65vw;
                 top: 8vw;
@@ -112,6 +204,9 @@
                 justify-content: center;
                 align-items: flex-start;
                 overflow: hidden;
+                z-index: 0;
+                background-color: #000;
+                // display: none;
 
                 .centre-circle-img {
                     position: absolute;
@@ -121,6 +216,34 @@
                     left: 10%;
                 }
             }
+
+            .robot-arm-img {
+                position: absolute;
+                width: 40vh;
+                top: 51vh;
+                z-index: 2;
+            }
+
+        }
+
+        .centre-circle-container-copy {
+            z-index: 0;
+            overflow: visible;
+
+            .ui-enhancement-main,
+            .creative-problem-main,
+            .growth-focused-main,
+            .deadline-commitment-main {
+                background: none;
+                border: none;
+                border-left: 1px solid #a9a9a93a;
+                border-right: 1px solid #a9a9a93a;
+                transition: 0.1s ease-in-out;
+
+            }
+
+
+
 
         }
     }
