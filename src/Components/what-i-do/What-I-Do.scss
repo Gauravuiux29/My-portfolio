@@ -134,7 +134,7 @@
                 transform: rotate(-55deg);
                 top: 20vw;
                 left: 7vw;
-               
+
             }
 
             .creative-problem-main {
@@ -171,17 +171,17 @@
 
             .deadline-commitment-main {
                 @extend .trapezoid-style;
-                width: 14vw;
+                width: 19vw;
                 transform: rotateX(-55deg) rotateZ(45deg);
-                top: 15vw;
-                right: 20vw;
+                top: 6vw;
+                right: 5vw;
             }
 
             .deadline-commitment-text {
                 @extend .trapezoid-inner-text-style;
                 transform: rotate(58deg);
-                top: 20.5vw;
-                left: 68vw;
+                top: 19.5vw;
+                left: 67.5vw;
             }
 
             .middle-circle {
@@ -239,6 +239,10 @@
                 border-left: 1px solid #a9a9a93a;
                 border-right: 1px solid #a9a9a93a;
                 transition: 0.1s ease-in-out;
+
+                &:hover {
+                    background: transparent;
+                }
 
             }
 

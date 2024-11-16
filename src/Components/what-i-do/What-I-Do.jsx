@@ -66,15 +66,24 @@ export default function WhatIDo({ Progress }) {
             style={{
               color: catagId === 4 && '#000'
             }}
-          >Deadline{catagId} <br /> Commitment</p>
+          >Deadline <br /> Commitment</p>
 
           <div className="ui-enhancement-main"
             onMouseOver={() => { setCatagId(1) }}
             onMouseOut={() => { setCatagId(0) }}
           />
-          <div className="creative-problem-main" onMouseOver={() => { setCatagId(2) }} onMouseOut={() => { setCatagId(0) }} />
-          <div className="growth-focused-main" onMouseOver={() => { setCatagId(3) }} onMouseOut={() => { setCatagId(0) }} />
-          <div className="deadline-commitment-main" onMouseOver={() => { setCatagId(4) }} onMouseOut={() => { setCatagId(0) }} />
+          <div className="creative-problem-main"
+            onMouseOver={() => { setCatagId(2) }}
+            onMouseOut={() => { setCatagId(0) }}
+          />
+          <div className="deadline-commitment-main"
+            onMouseOver={() => { setCatagId(4) }}
+            onMouseOut={() => { setCatagId(0) }}
+          />
+          <div className="growth-focused-main"
+            onMouseOver={() => { setCatagId(3) }}
+            onMouseOut={() => { setCatagId(0) }}
+          />
 
 
 
