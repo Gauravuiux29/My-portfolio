@@ -83,7 +83,7 @@
             top: 13.6vw;
             aspect-ratio: 1;
             border: 1px solid #ffffff4f;
-            border-radius: 1000px;
+            border-radius: 10000px;
             display: flex;
             justify-content: center;
             align-items: flex-start;
@@ -116,7 +116,7 @@
                 margin-left: 0.5em;
                 color: #fff;
                 z-index: 2;
-                font-size: 1.2rem;
+                font-size: clamp(0.1rem, 1.2vw, 3rem);
                 text-shadow: 1px 1px 2px #00000059
             }
 
@@ -179,8 +179,8 @@
             .deadline-commitment-text {
                 @extend .trapezoid-inner-text-style;
                 transform: rotate(58deg);
-                top: 19.5vw;
-                left: 67.5vw;
+                top: 19vw;
+                left: 67vw;
             }
 
             .middle-circle {
@@ -189,7 +189,7 @@
                 top: 8vw;
                 aspect-ratio: 1;
                 border: 1px solid #ffffff4f;
-                border-radius: 1000px;
+                border-radius: 10000px;
             }
 
             .centre-circle-inner {
@@ -198,7 +198,7 @@
                 top: 32vh;
                 aspect-ratio: 1;
                 border: 1px solid #ffffff4f;
-                border-radius: 500px;
+                border-radius: 10000px;
                 display: flex;
                 justify-content: center;
                 align-items: flex-start;

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.scss';
 
 import SplineEmbed from './Components/spline-embed/SplineEmbed';
@@ -12,6 +12,10 @@ function App() {
     Page: '',
     Index: ''
   })
+
+  useEffect(() => {
+    window.scrollTo(0,0)
+  },[])
   return (
     <div className="App">
       <p
