@@ -1,25 +1,53 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import './App.scss';
+
+import SplineEmbed from './Components/spline-embed/SplineEmbed';
+import WhatIDo from './Components/what-i-do/What-I-Do';
+import Stickyroll from "@stickyroll/react/stickyroll";
+import JumpIntoJourney from './Components/jump-into-journey/Jump-Into-Journey';
 
 function App() {
+  const [progress, setProgress] = useState({
+    Progress: '',
+    Page: '',
+    Index: ''
+  })
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+      <p
+        style={{
+          position: 'fixed',
+          top: '0', right: '0',
+          fontSize: '1.5rem',
+          color: '#fff',
+          zIndex: '10'
+        }}>
+        {(progress.Progress + (progress.Page - 1))}
+        {/* {progress.Progress} */}
+      </p>
+      <SplineEmbed />
+      <div className='scrollable-section'>
+
+        <Stickyroll
+          pages={5} factor={3}
+          onProgress={(progress, page, index) => {
+            setProgress({
+              Progress: progress,
+              Page: page,
+              Index: index
+            })
+          }}
         >
-          Learn React
-        </a>
-      </header>
+          <WhatIDo Progress={progress} />
+          <JumpIntoJourney Progress={progress} />
+        </Stickyroll>
+      </div>
+
     </div>
   );
 }
 
 export default App;
+
+
+
