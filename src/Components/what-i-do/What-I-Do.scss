@@ -99,7 +99,6 @@
                 z-index: 1;
                 transform-style: preserve-3d;
                 transform: rotateX(-55deg);
-                transition: 0.1s ease-in-out;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -238,7 +237,6 @@
                 border: none;
                 border-left: 1px solid #a9a9a93a;
                 border-right: 1px solid #a9a9a93a;
-                transition: 0.1s ease-in-out;
 
                 &:hover {
                     background: transparent;
