@@ -68,24 +68,48 @@ export default function WhatIDo({ Progress }) {
             }}
           >Deadline <br /> Commitment</p>
 
+
           <div className="ui-enhancement-main"
+            style={{
+              background: catagId === 1 && 'linear-gradient(0deg, #B2FF00 0%, #B2FF00 100%)'
+            }}
+          />
+          <div className="creative-problem-main"
+            style={{
+              background: catagId === 2 && 'linear-gradient(0deg, #B2FF00 0%, #B2FF00 100%)'
+            }}
+          />
+          <div className="deadline-commitment-main"
+            style={{
+              background: catagId === 4 && 'linear-gradient(0deg, #B2FF00 0%, #B2FF00 100%)'
+            }}
+          />
+          <div className="growth-focused-main"
+            style={{
+              background: catagId === 3 && 'linear-gradient(0deg, #B2FF00 0%, #B2FF00 100%)'
+            }}
+          />
+
+          {/* ----------------------COPY------------------------ */}
+
+          <div className="ui-enhancement-copy"
             onMouseOver={() => { setCatagId(1) }}
             onMouseOut={() => { setCatagId(0) }}
           />
-          <div className="creative-problem-main"
+          <div className="creative-problem-copy"
             onMouseOver={() => { setCatagId(2) }}
             onMouseOut={() => { setCatagId(0) }}
           />
-          <div className="deadline-commitment-main"
+          <div className="deadline-commitment-copy"
             onMouseOver={() => { setCatagId(4) }}
             onMouseOut={() => { setCatagId(0) }}
           />
-          <div className="growth-focused-main"
+          <div className="growth-focused-copy "
             onMouseOver={() => { setCatagId(3) }}
             onMouseOut={() => { setCatagId(0) }}
           />
 
-
+          {/* __________________________________________________ */}
 
 
           <div className="middle-circle" />
@@ -93,14 +117,20 @@ export default function WhatIDo({ Progress }) {
             <img src={CentreCircle} alt="" className="centre-circle-img" />
 
           </div>
-          <img src={RobotArm} alt="" className="robot-arm-img" />
+          <img src={RobotArm} alt="" className="robot-arm-img"
+            style={{
+              transform: catagId === 1 ? `rotate(-55deg)` :
+                catagId === 2 ? `rotate(-15deg)` :
+                  catagId === 3 ? `rotate(20deg)` :
+                    catagId === 4 ? `rotate(60deg)` : ''
+            }}
+          />
 
 
         </div>
 
 
-
-
+        {/* -------------------------------------------- */}
 
         <div className="centre-circle-container centre-circle-container-copy">
 

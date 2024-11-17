@@ -93,7 +93,7 @@
 
             .trapezoid-style {
                 position: absolute;
-                width: 14vw;
+                // width: 14vw;
                 height: 35vw;
                 background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(36, 36, 36, 0.499124649859944) 100%);
                 z-index: 1;
@@ -170,19 +170,64 @@
 
             .deadline-commitment-main {
                 @extend .trapezoid-style;
-                width: 19vw;
-                transform: rotateX(-55deg) rotateZ(45deg);
-                top: 6vw;
-                right: 5vw;
+                width: 18vw;
+                transform: rotateX(-60deg) rotateZ(40deg);
+                top: 14vw;
+                right: 15vw;
             }
 
             .deadline-commitment-text {
                 @extend .trapezoid-inner-text-style;
                 transform: rotate(58deg);
-                top: 19vw;
-                left: 67vw;
+                top: 21vw;
+                left: 68vw;
             }
 
+
+            // -------------COPY------------------
+            // trapezoid-style
+
+            .ui-enhancement-copy {
+                @extend .ui-enhancement-main;
+                z-index: 2;
+                background: none;
+
+                &:hover {
+                    background: unset;
+                }
+            }
+
+            .creative-problem-copy {
+                @extend .creative-problem-main;
+                z-index: 2;
+                background: none;
+
+                &:hover {
+                    background: unset;
+                }
+            }
+
+            .deadline-commitment-copy {
+                @extend .deadline-commitment-main;
+                z-index: 2;
+                background: none;
+
+                &:hover {
+                    background: unset;
+                }
+            }
+
+            .growth-focused-copy {
+                @extend .growth-focused-main;
+                z-index: 2;
+                background: none;
+
+                &:hover {
+                    background: unset;
+                }
+            }
+
+            // ___________________________________
             .middle-circle {
                 position: absolute;
                 width: 65vw;

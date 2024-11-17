@@ -33,7 +33,7 @@ function App() {
       <div className='scrollable-section'>
 
         <Stickyroll
-          pages={5} factor={3}
+          pages={5} factor={4}
           onProgress={(progress, page, index) => {
             setProgress({
               Progress: progress,

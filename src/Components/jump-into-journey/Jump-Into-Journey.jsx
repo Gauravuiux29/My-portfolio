@@ -19,8 +19,8 @@ export default function JumpIntoJourney({ Progress }) {
         <div className="jump-into-journey-main-container"
             style={{
                 position: sValue >= 4 && 'absolute',
-                top: sValue > 0.5 && '0',
-                left: sValue > 0.5 && '0',
+                top: sValue > 0 && '0',
+                left: sValue > 0 && '0',
                 transform: sValue >= 0.5 && sValue < 2 ? `translateX(0)` :
                     sValue > 2 && `translateY(-100%)`
             }}
