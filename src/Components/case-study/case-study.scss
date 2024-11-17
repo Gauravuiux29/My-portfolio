@@ -1,0 +1,45 @@
+.case-study-main-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    // border: 1px solid #fff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    transition: 1.2s ease-in-out;
+    overflow: hidden;
+    transform: translateY(100%);
+    z-index: 1;
+    gap: 4% 2%;
+    padding: 5%;
+
+    .case-study-one {
+        width: 45%;
+        aspect-ratio: 1.2;
+        background-color: #ff5d5d;
+        border-radius: 1vw;
+    }
+
+    .case-study-two {
+        width: 45%;
+        aspect-ratio: 1.2;
+        background-color: #464646;
+        border-radius: 1vw;
+
+    }
+
+    .live-project-section {
+        width: 92%;
+        aspect-ratio: 2.5;
+        background-color: #fff;
+        border-radius: 1vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+}

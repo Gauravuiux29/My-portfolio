@@ -5,6 +5,7 @@ import SplineEmbed from './Components/spline-embed/SplineEmbed';
 import WhatIDo from './Components/what-i-do/What-I-Do';
 import Stickyroll from "@stickyroll/react/stickyroll";
 import JumpIntoJourney from './Components/jump-into-journey/Jump-Into-Journey';
+import CaseStudy from './Components/case-study/CaseStudy';
 
 function App() {
   const [progress, setProgress] = useState({
@@ -14,8 +15,8 @@ function App() {
   })
 
   useEffect(() => {
-    window.scrollTo(0,0)
-  },[])
+    window.scrollTo(0, 0)
+  }, [])
   return (
     <div className="App">
       <p
@@ -44,6 +45,7 @@ function App() {
         >
           <WhatIDo Progress={progress} />
           <JumpIntoJourney Progress={progress} />
+          <CaseStudy Progress={progress} />
         </Stickyroll>
       </div>
 

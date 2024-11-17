@@ -1,0 +1,125 @@
+.live-project-main-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1vw;
+    overflow: hidden;
+
+    .bg-rect {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        transition: 0.15s ease-in-out;
+
+    }
+
+    .bg-img-style {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0;
+        transition: 0.15s ease-in-out;
+    }
+
+    .bg-one {
+        @extend .bg-img-style;
+        mix-blend-mode: color-burn;
+    }
+
+    .bg-two {
+        @extend .bg-img-style;
+        mix-blend-mode: darken;
+
+    }
+
+    .bg-three {
+        @extend .bg-img-style;
+        mix-blend-mode: color-dodge;
+    }
+
+    .bg-four {
+        @extend .bg-img-style;
+        mix-blend-mode: hard-light;
+
+    }
+
+    .project-box-styles {
+        position: absolute;
+        min-width: 24vw;
+        aspect-ratio: 1;
+        // border: 1px solid #000;
+        background-color: #fff000;
+        border-radius: 0.8vw;
+        top: 20%;
+
+    }
+
+    .project-one {
+        @extend .project-box-styles;
+        transform: rotate(-11deg);
+        left: 10%;
+        z-index: 3;
+        // opacity: 0.4;
+        transition: 0.15s ease-in-out;
+        background-color: #ff4d4d;
+
+        &:hover {
+            z-index: 4;
+            transform: rotate(0) scale(1.1) translateY(-5%);
+            box-shadow: 1vw 1vw 5px #00000060;
+        }
+    }
+
+    .project-two {
+        @extend .project-box-styles;
+        transform: rotate(7deg);
+        left: 27%;
+        z-index: 2;
+        transition: 0.15s ease-in-out;
+        background-color: #464646;
+
+        &:hover {
+            z-index: 4;
+            transform: rotate(0) scale(1.1) translateY(-5%);
+            box-shadow: 1vw 1vw 5px #00000060;
+        }
+
+    }
+
+    .project-three {
+        @extend .project-box-styles;
+        transform: rotate(-4deg);
+        right: 25%;
+        z-index: 1;
+        transition: 0.15s ease-in-out;
+        background-color: #d7d7d7;
+
+        &:hover {
+            z-index: 4;
+            transform: rotate(0) scale(1.1) translateY(-5%);
+            box-shadow: 1vw 1vw 5px #00000060;
+        }
+
+    }
+
+    .project-four {
+        @extend .project-box-styles;
+        transform: rotate(11deg);
+        right: 10%;
+        z-index: 0;
+        transition: 0.15s ease-in-out;
+        background-color: #ff4d4d;
+
+        &:hover {
+            z-index: 4;
+            transform: rotate(0) scale(1.1) translateY(-5%);
+            box-shadow: 1vw 1vw 5px #00000060;
+        }
+
+    }
+}

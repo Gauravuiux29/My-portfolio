@@ -16,6 +16,7 @@ export default function SplineEmbed() {
 
   return (
     <div className='spline-embed-main-container' ref={splineContainerRef}>
+    
       <Spline scene='https://prod.spline.design/bPWMLwf2fIc6iFGr/scene.splinecode' />
 
     </div>
