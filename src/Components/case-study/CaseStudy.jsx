@@ -5,6 +5,9 @@ import './case-study.scss';
 
 //components
 import LiveProject from './live-project-comp/LiveProject';
+import CSOne from './cs-one/CSOne';
+import CSTwo from './cs-two/CSTwo';
+
 
 export default function CaseStudy({ Progress }) {
     const sValue = (Progress.Progress + (Progress.Page - 1));
@@ -23,14 +26,18 @@ export default function CaseStudy({ Progress }) {
                     // transform: 'translate(-50vw)'
                     transform: `${Math.min(150, (sValue - 2.4) * 140)}` > 0 && `translate(-${Math.min(150, (sValue - 2.4) * 140)}%)`
                 }}
-            ></div>
+            >
+                <CSOne />
+            </div>
             <div className="case-study-two"
                 style={{
                     // transform: 'translate(50vw)'
                     transform: `${Math.min(150, (sValue - 2.4) * 140)}` > 0 && `translate(${Math.min(150, (sValue - 2.4) * 140)}%)`
 
                 }}
-            ></div>
+            >
+                <CSTwo />
+            </div>
             <div className="live-project-section"
                 style={{
                     transform: `${Math.min(80, (sValue - 3.1) * 140)}` > 0 && `translateY(-${Math.min(100, (sValue - 3.1) * 140)}%)`

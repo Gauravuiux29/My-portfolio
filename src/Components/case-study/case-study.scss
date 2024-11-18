@@ -20,8 +20,9 @@
     .case-study-one {
         width: 45%;
         aspect-ratio: 1.2;
-        background-color: #ff5d5d;
+        background-color: #fff;
         border-radius: 1vw;
+        overflow: hidden;
     }
 
     .case-study-two {
@@ -29,7 +30,7 @@
         aspect-ratio: 1.2;
         background-color: #464646;
         border-radius: 1vw;
-
+        overflow: hidden;
     }
 
     .live-project-section {

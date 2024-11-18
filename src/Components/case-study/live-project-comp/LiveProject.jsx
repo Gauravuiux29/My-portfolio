@@ -3,6 +3,13 @@ import React, { useState } from 'react';
 //styles
 import './live-project.scss';
 
+
+// components
+import CSOne from '../cs-one/CSOne';
+import CSTwo from '../cs-two/CSTwo';
+import CSThree from '../cs-three/CSThree';
+import CSFour from '../cs-four/CSFour';
+
 //images
 import pj1Bg from '../../../assets/steve-johnson-5Oe8KFH5998-unsplash.png';
 import pj2Bg from '../../../assets/sardar-faizan-H4D7JmRMsNk-unsplash.png';
@@ -53,22 +60,22 @@ export default function LiveProject() {
                 className="project-one"
                 onMouseOver={() => { setCardID(1) }}
                 onMouseOut={() => { setCardID(0) }}
-            ></div>
+            ><CSOne /></div>
             <div
                 className="project-two"
                 onMouseOver={() => { setCardID(2) }}
                 onMouseOut={() => { setCardID(0) }}
-            ></div>
+            ><CSTwo /></div>
             <div
                 className="project-three"
                 onMouseOver={() => { setCardID(3) }}
                 onMouseOut={() => { setCardID(0) }}
-            ></div>
+            ><CSThree /></div>
             <div
                 className="project-four"
                 onMouseOver={() => { setCardID(4) }}
                 onMouseOut={() => { setCardID(0) }}
-            ></div>
+            ><CSFour /></div>
 
         </div>
     )

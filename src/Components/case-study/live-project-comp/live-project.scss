@@ -51,11 +51,14 @@
     .project-box-styles {
         position: absolute;
         min-width: 24vw;
-        aspect-ratio: 1;
-        // border: 1px solid #000;
+        height: 24vw;
         background-color: #fff000;
         border-radius: 0.8vw;
         top: 20%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
 
     }
 
