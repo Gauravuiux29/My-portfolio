@@ -18,11 +18,18 @@ import pj4Bg from '../../../assets/Group-1000011072.png';
 
 
 
-export default function LiveProject() {
+export default function LiveProject({ Progress }) {
 
     const [cardID, setCardID] = useState(0);
+
+    const sValue = (Progress.Progress + (Progress.Page - 1));
+
     return (
-        <div className="live-project-main-container">
+        <div className="live-project-main-container"
+            style={{
+                transform: sValue > 4 && `rotateX(-85deg)`
+            }}
+        >
 
             <div className="bg-rect"
                 style={{
@@ -57,13 +64,13 @@ export default function LiveProject() {
 
             <p className="live-project-text"
                 style={{
-                    border: cardID === 3 && '0.12vw solid #fff'
+                    border: cardID === 3 && '0.12vw solid #ffffffcd'
                 }}
             >
                 <span className='vector-span' />
                 <span className="text-span"
                     style={{
-                        color: cardID === 3 && '#fff',
+                        color: cardID === 3 && '#ffffffcd',
                         fontWeight: cardID === 3 && '400'
                     }}
                 >Live Projects</span>

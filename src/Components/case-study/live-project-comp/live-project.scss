@@ -1,5 +1,5 @@
 .live-project-main-container {
-    position: relative;
+    position: absolute;
     width: 100%;
     height: 100%;
     background-color: #fff;
@@ -8,6 +8,10 @@
     align-items: center;
     border-radius: 1vw;
     overflow: hidden;
+    transform-style: preserve-3d;
+    // transform: rotateX(-85deg);
+    transition: 1.6s ease-in-out;
+
 
     .bg-rect {
         position: absolute;

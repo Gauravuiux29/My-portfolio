@@ -34,13 +34,15 @@
     }
 
     .live-project-section {
+        position: relative;
         width: 92%;
         aspect-ratio: 2.5;
-        background-color: #fff;
+        // background-color: #fff;
         border-radius: 1vw;
         display: flex;
         justify-content: center;
         align-items: center;
+        perspective: 1000px;
 
     }
 }

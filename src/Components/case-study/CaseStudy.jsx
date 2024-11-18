@@ -43,7 +43,7 @@ export default function CaseStudy({ Progress }) {
                     transform: `${Math.min(80, (sValue - 3.1) * 140)}` > 0 && `translateY(-${Math.min(100, (sValue - 3.1) * 140)}%)`
                 }}
             >
-                <LiveProject />
+                <LiveProject Progress={Progress} />
             </div>
 
         </div>
