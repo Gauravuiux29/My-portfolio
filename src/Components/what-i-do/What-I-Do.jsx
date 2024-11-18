@@ -42,9 +42,9 @@ export default function WhatIDo({ Progress }) {
 
         }}
       >
-        <img src={CircleOne} alt="" className="circle-one" />
-        <img src={CircleTwo} alt="" className="circle-two" />
-        <img src={CircleThree} alt="" className="circle-three" />
+        <img src={CircleOne} alt="" className="circle-one" loading='lazy'/>
+        <img src={CircleTwo} alt="" className="circle-two"loading='lazy' />
+        <img src={CircleThree} alt="" className="circle-three" loading='lazy'/>
 
         <div className="centre-circle-container">
           <p className='ui-enhancement-text inner-text'
@@ -114,10 +114,10 @@ export default function WhatIDo({ Progress }) {
 
           <div className="middle-circle" />
           <div className="centre-circle-inner">
-            <img src={CentreCircle} alt="" className="centre-circle-img" />
+            <img src={CentreCircle} alt="" className="centre-circle-img" loading='lazy'/>
 
           </div>
-          <img src={RobotArm} alt="" className="robot-arm-img"
+          <img src={RobotArm} alt="" className="robot-arm-img" loading='lazy'
             style={{
               transform: catagId === 1 ? `rotate(-55deg)` :
                 catagId === 2 ? `rotate(-15deg)` :

@@ -43,12 +43,12 @@ export default function JumpIntoJourney({ Progress }) {
                             maskImage: `url(${MaskText})`
                         }}
                     >
-                        <img src={MaskBGImg} alt="" className="mask-bg" />
+                        <img src={MaskBGImg} alt="" className="mask-bg" loading='lazy'/>
                     </div>
                 </div>
                 <div className="fr-2">
                     <div className="circle-div">
-                        <img src={CircleVector} alt="" className="vector-img" />
+                        <img src={CircleVector} alt="" className="vector-img" loading='lazy'/>
                         <div className="inner-circle" />
                     </div>
                     <p>where</p>
@@ -79,7 +79,7 @@ export default function JumpIntoJourney({ Progress }) {
 
                     }}
                 >
-                    <img src={Robot} alt="" className="robot-img"
+                    <img src={Robot} alt="" className="robot-img" loading='lazy'
                         style={{
                             transition: sValue > 2 && '1.2s',
                             transform: sValue > 2 && `rotate(0deg)`
@@ -88,7 +88,7 @@ export default function JumpIntoJourney({ Progress }) {
                         }}
                     />
 
-                    <img src={Stage} alt="" className="stage-img"
+                    <img src={Stage} alt="" className="stage-img" loading='lazy'
                         style={{
                             transition: sValue > 2 && '1.2s',
                             transform: sValue > 2 && `rotate(0deg)`
@@ -111,7 +111,7 @@ export default function JumpIntoJourney({ Progress }) {
                             }}
                         >
 
-                            <img src={MaskBGImg} alt="" className="mask-bg"
+                            <img src={MaskBGImg} alt="" className="mask-bg" loading='lazy'
                                 style={{
                                 }}
                             />

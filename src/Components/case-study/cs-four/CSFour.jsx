@@ -10,7 +10,7 @@ export default function CSFour() {
     return (
         <div className="cs-four-main-container">
             <div className="frame-one" >
-                <img src={frame1} alt="" className="frame1-img" />
+                <img src={frame1} alt="" className="frame1-img" loading='lazy'/>
             </div>
         </div>
     )

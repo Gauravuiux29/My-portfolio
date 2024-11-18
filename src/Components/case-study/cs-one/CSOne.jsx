@@ -11,10 +11,10 @@ export default function CSOne() {
     return (
         <div className="cs-one-main-container">
             <div className="frame-one" >
-                <img src={frame1} alt="" className="frame1-img" />
+                <img src={frame1} alt="" className="frame1-img" loading='lazy'/>
             </div>
             <div className="frame-two" >
-                <img src={frame2} alt="" className="frame2-img" />
+                <img src={frame2} alt="" className="frame2-img" loading='lazy'/>
             </div>
         </div>
     )

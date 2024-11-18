@@ -48,9 +48,48 @@
 
     }
 
+    .live-project-text {
+        position: absolute;
+        top: 1.8%;
+        width: 12vw;
+        height: 3vw;
+        border: 0.2vw solid #414040;
+        border-radius: 500px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.6em;
+
+          /* Keyframes for blinking */
+          @keyframes blink-animation {
+            0%, 100% {
+              opacity: 1; /* Fully visible */
+            }
+            50% {
+              opacity: 0; /* Invisible */
+            }
+          }
+
+        .vector-span {
+            width: 0.8vw;
+            height: 0.8vw;
+            background-color: #ff4d4d;
+            animation: blink-animation 1.2s  infinite;
+
+        }
+
+        .text-span {
+            font-size: 1.1vw;
+            color: #000;
+            font-family: "Poppins", serif;
+            font-style: normal;
+            font-weight: 600;
+        }
+    }
+
     .project-box-styles {
         position: absolute;
-        min-width: 24vw;
+        max-width: 24vw;
         height: 24vw;
         background-color: #fff000;
         border-radius: 0.8vw;

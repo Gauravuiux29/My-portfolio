@@ -30,7 +30,9 @@ function App() {
         {(progress.Progress + (progress.Page - 1))}
         {/* {progress.Progress} */}
       </p>
+    { (progress.Progress + (progress.Page - 1)) < 1 &&
       <SplineEmbed />
+    }
       <div className='scrollable-section'>
 
         <Stickyroll

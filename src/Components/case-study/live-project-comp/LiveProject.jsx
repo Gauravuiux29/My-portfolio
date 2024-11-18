@@ -34,26 +34,40 @@ export default function LiveProject() {
                 }}
             />
 
-            <img src={pj1Bg} alt="" className="bg-one"
+            <img src={pj1Bg} alt="" className="bg-one" loading='lazy'
                 style={{
                     opacity: cardID === 1 && '0.5'
                 }}
             />
-            <img src={pj2Bg} alt="" className="bg-two"
+            <img src={pj2Bg} alt="" className="bg-two" loading='lazy'
                 style={{
                     opacity: cardID === 2 && '0.3'
                 }}
             />
-            <img src={pj3Bg} alt="" className="bg-three"
+            <img src={pj3Bg} alt="" className="bg-three" loading='lazy'
                 style={{
                     opacity: cardID === 3 && '0.5'
                 }}
             />
-            <img src={pj4Bg} alt="" className="bg-four"
+            <img src={pj4Bg} alt="" className="bg-four" loading='lazy'
                 style={{
                     opacity: cardID === 4 && '1'
                 }}
             />
+
+            <p className="live-project-text"
+                style={{
+                    border: cardID === 3 && '0.12vw solid #fff'
+                }}
+            >
+                <span className='vector-span' />
+                <span className="text-span"
+                    style={{
+                        color: cardID === 3 && '#fff',
+                        fontWeight: cardID === 3 && '400'
+                    }}
+                >Live Projects</span>
+            </p>
 
 
             <div
