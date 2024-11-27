@@ -1,12 +1,33 @@
 .spline-embed-main-container {
   position: relative;
-    width: 100%;
-    height: 100vh;
-    background-color: #000;
+  width: 100%;
+  height: 100vh;
+  background-color: #000;
+  z-index: 1;
 
-  .custom-canvas-class{
+  .custom-canvas-class {
     position: absolute;
     width: 100% !important;
     height: 100% !important;
   }
+
+  .loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+  }
+
+  .loader-gif {
+    width: 14vw;
+    height: 14vw;
+    object-fit: contain;
+  }
+
+  
 }

@@ -7,7 +7,8 @@ import './cs-one.scss';
 import frame1 from '../../../assets/Frame-1171276723.png';
 import frame2 from '../../../assets/Component-85.png';
 
-export default function CSOne() {
+export default function CSOne({Progres}) {
+
     return (
         <div className="cs-one-main-container">
             <div className="frame-one" >

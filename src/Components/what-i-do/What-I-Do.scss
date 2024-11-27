@@ -2,14 +2,17 @@
     position: fixed;
     width: 100vw;
     height: 100vh;
+    top: 0;
+    left: 0;
     // height: 100%;
     background-color: #000;
-    border: 1px solid #fff;
+    // border: 1px solid #fff;
     display: flex;
     justify-content: center;
     align-items: center;
     transition: 1.2s ease-in-out;
     overflow: hidden;
+    transform: translate(0%,100%);
 
     .whatido-text-img {
         position: absolute;
@@ -19,6 +22,7 @@
         width: 10%;
         object-fit: contain;
         transition: 1.2s ease-in-out;
+        transform: translate(45vw, 45vh) scale(1);
 
     }
 
@@ -30,7 +34,7 @@
         justify-content: center;
         align-items: center;
         overflow: hidden;
-        transition: 1.2s ease-in-out;
+        // transition: 1.2s ease-in-out;
         transform: translateY(100%);
 
         .circle-one,
@@ -191,6 +195,7 @@
                 @extend .ui-enhancement-main;
                 z-index: 2;
                 background: none;
+                opacity: 0;
 
                 &:hover {
                     background: unset;
@@ -201,6 +206,7 @@
                 @extend .creative-problem-main;
                 z-index: 2;
                 background: none;
+                opacity: 0;
 
                 &:hover {
                     background: unset;
@@ -211,6 +217,7 @@
                 @extend .deadline-commitment-main;
                 z-index: 2;
                 background: none;
+                opacity: 0;
 
                 &:hover {
                     background: unset;
@@ -221,6 +228,7 @@
                 @extend .growth-focused-main;
                 z-index: 2;
                 background: none;
+                opacity: 0;
 
                 &:hover {
                     background: unset;

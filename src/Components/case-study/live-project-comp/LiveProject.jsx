@@ -27,7 +27,7 @@ export default function LiveProject({ Progress }) {
     return (
         <div className="live-project-main-container"
             style={{
-                transform: sValue > 4 && `rotateX(-85deg)`
+                transform: sValue > 3 && `rotateX(-85deg)`
             }}
         >
 

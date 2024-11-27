@@ -6,6 +6,8 @@ import WhatIDo from './Components/what-i-do/What-I-Do';
 import Stickyroll from "@stickyroll/react/stickyroll";
 import JumpIntoJourney from './Components/jump-into-journey/Jump-Into-Journey';
 import CaseStudy from './Components/case-study/CaseStudy';
+import Typography from './Components/typography-comp/Typography';
+import UIProjects from './Components/ui-projects/UIProjects';
 
 function App() {
   const [progress, setProgress] = useState({
@@ -17,6 +19,7 @@ function App() {
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
+  
   return (
     <div className="App">
       <p
@@ -30,13 +33,13 @@ function App() {
         {(progress.Progress + (progress.Page - 1))}
         {/* {progress.Progress} */}
       </p>
-    { (progress.Progress + (progress.Page - 1)) < 1 &&
-      <SplineEmbed />
-    }
+      {(progress.Progress + (progress.Page - 1)) < 1 &&
+        <SplineEmbed />
+      }
       <div className='scrollable-section'>
 
         <Stickyroll
-          pages={5} factor={4}
+          pages={5} factor={6}
           onProgress={(progress, page, index) => {
             setProgress({
               Progress: progress,
@@ -48,6 +51,8 @@ function App() {
           <WhatIDo Progress={progress} />
           <JumpIntoJourney Progress={progress} />
           <CaseStudy Progress={progress} />
+          <Typography Progress={progress} />
+          <UIProjects Progress={progress} />
         </Stickyroll>
       </div>
 
