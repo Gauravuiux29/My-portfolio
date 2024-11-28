@@ -71,8 +71,8 @@ export default function Typography({ Progress }) {
     return (
         <div className="typography-main-container"
             style={{
-                transform: sValue >= 0 && sValue < 1 ? 'translateY(0%)' : 
-                sValue >= 1 && "translateY(-100%)"
+                transform: sValue >= 0 && sValue < 0.5 ? 'translateY(0%)' : 
+                sValue >= 0.5 && "translateY(-100%)"
 
             }}
         >

@@ -6,13 +6,14 @@
     left: 0;
     // height: 100%;
     background-color: #000;
+    // background: transparent;
     // border: 1px solid #fff;
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: 1.2s ease-in-out;
+    // transition: 0.8s ease-in-out;
     overflow: hidden;
-    transform: translate(0%,100%);
+    transform: translate(0%, 100%);
 
     .whatido-text-img {
         position: absolute;
@@ -21,9 +22,9 @@
         z-index: 1;
         width: 10%;
         object-fit: contain;
-        transition: 1.2s ease-in-out;
+        transition: 0.8s ease-in-out;
         transform: translate(45vw, 45vh) scale(1);
-
+        opacity: 0;
     }
 
     .wheel-container {

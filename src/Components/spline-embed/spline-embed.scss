@@ -8,7 +8,9 @@
   .custom-canvas-class {
     position: absolute;
     width: 100% !important;
-    height: 100% !important;
+    height: 100vh !important;
+
+
   }
 
   .loader {
@@ -21,13 +23,14 @@
     align-items: center;
     justify-content: center;
     z-index: 10;
+    // background-color: #fff000;
+
+    .loader-gif {
+      width: 14vw;
+      height: 14vw;
+      object-fit: contain;
+    }
   }
 
-  .loader-gif {
-    width: 14vw;
-    height: 14vw;
-    object-fit: contain;
-  }
 
-  
 }

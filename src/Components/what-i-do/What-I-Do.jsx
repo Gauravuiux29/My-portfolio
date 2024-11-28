@@ -23,15 +23,18 @@ export default function WhatIDo({ Progress }) {
     <div className="wid-main-container"
       style={{
         transform:
-          sValue >= 0 && sValue < 0.8 ? 'translate(0%, 0%)' :
-            sValue >= 0.8 && 'translateX(-100%)'
+          // sValue >= 0 && sValue < 0.8 ? `translate(0%, ${Math.max(0, (35 - sValue * 100))}%)` :
+          sValue >= 0 && sValue < 0.8 ? `translate(0%, 0%)` :
+
+            sValue >= 0.8 && 'translateX(-100%)',
+        transition: sValue >= 0.4 && '0.8s ease-in-out'
       }}
     >
       <img src={WhatIDoText} alt="" className="whatido-text-img"
 
         style={{
-          transform: sValue > 0.4 && `translate(0vw, 0vh) scale(0.8)`
-
+          opacity: sValue > 0 && '1',
+          transform: sValue > 0.4 && `translate(0vw, 0vh) scale(0.8)`,
         }}
       />
 

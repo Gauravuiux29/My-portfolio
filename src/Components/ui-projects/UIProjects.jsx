@@ -19,7 +19,7 @@ import logoVideo from '../../assets/logo-video.mp4';
 
 
 export default function UIProjects({ Progress }) {
-    const sValue = (Progress.Progress + (Progress.Page - 5));
+    const sValue = (Progress.Progress + (Progress.Page - 4.5));
     const [frameID, setFrameID] = useState(0)
     const [itemID, setItemID] = useState(0)
     const videoRef = useRef(null);
@@ -151,20 +151,57 @@ export default function UIProjects({ Progress }) {
                             <img src={MaskBG3} alt="" className="bg-mask-img" />
                         </div>
                     </div>
-                    
+
                     <video className='video-mask'
-                        ref={videoRef}
                         muted
                         loop
                         preload="auto"
                         autoPlay
                         style={{
-                            opacity: sValue >= 0.2 && sValue < 0.9 ? '1' : '0'
+                            opacity: sValue >= 0.2 && sValue < 0.4 ? '1' : '0'
                         }}
                     >
-                        <source type="video/mp4" />
+                        <source src={logoVideo} type="video/mp4" />
 
                     </video>
+                    <video className='video-mask'
+                        muted
+                        loop
+                        preload="auto"
+                        autoPlay
+                        style={{
+                            opacity: sValue >= 0.4 && sValue < 0.6 ? '1' : '0'
+                        }}
+                    >
+                        <source src={personalProfile} type="video/mp4" />
+
+                    </video>
+                    <video className='video-mask'
+                        muted
+                        loop
+                        preload="auto"
+                        autoPlay
+                        style={{
+                            opacity: sValue >= 0.6 && sValue < 0.8 ? '1' : '0'
+                        }}
+                    >
+                        <source src={movieDeck} type="video/mp4" />
+
+                    </video>
+                    <video className='video-mask'
+                        muted
+                        loop
+                        preload="auto"
+                        autoPlay
+                        style={{
+                            opacity: sValue >= 0.8 && sValue < 0.9 ? '1' : '0'
+                        }}
+                    >
+                        <source src={personalProject} type="video/mp4" />
+
+                    </video>
+
+
                 </div>
 
                 <p className="bottom-txt"
@@ -185,14 +222,14 @@ export default function UIProjects({ Progress }) {
                 <span>Design</span>
             </div>
 
-            <div className="dark-layer" 
-            style={{
-                opacity: sValue >= 0.2 && sValue < 0.4 ? '0' :
-                sValue >= 0.4 && sValue < 0.6 ? '0.8' :
-                    sValue >= 0.6 && sValue < 0.8 ? '0.4' :
-                        sValue >= 0.8 && '0.8'
+            <div className="dark-layer"
+                style={{
+                    opacity: sValue >= 0.2 && sValue < 0.4 ? '0' :
+                        sValue >= 0.4 && sValue < 0.6 ? '0.8' :
+                            sValue >= 0.6 && sValue < 0.8 ? '0.4' :
+                                sValue >= 0.8 && '0.8'
 
-            }}
+                }}
             />
 
             <div className="right-nav"
@@ -248,7 +285,7 @@ export default function UIProjects({ Progress }) {
                     transform: sValue >= 0.2 && sValue < 0.9 && 'translate(0)'
                 }}
             >
-                <p>3d Home Page{itemID}</p>
+                <p>3d Home Page</p>
                 <span>i have crafted Interactive pitch decks for various startups, but due to privacy concerns, I cant showcase my recent projects, here are some short project just to showcase my UI skills.</span>
             </div>
 
@@ -262,18 +299,54 @@ export default function UIProjects({ Progress }) {
 
                 }}
             >
-                <video
-                    className='video-file'
-                    ref={videoRef2}
-                    muted
-                    loop
-                    preload="auto"
-                    autoPlay
+                 <video className='video-file'
+                        muted
+                        loop
+                        preload="auto"
+                        autoPlay
+                        style={{
+                            opacity: sValue >= 0.2 && sValue < 0.4 ? '1' : '0'
+                        }}
+                    >
+                        <source src={logoVideo} type="video/mp4" />
 
-                >
-                    <source src={logoVideo} type="video/mp4" />
+                    </video>
+                    <video className='video-file'
+                        muted
+                        loop
+                        preload="auto"
+                        autoPlay
+                        style={{
+                            opacity: sValue >= 0.4 && sValue < 0.6 ? '1' : '0'
+                        }}
+                    >
+                        <source src={personalProfile} type="video/mp4" />
 
-                </video>
+                    </video>
+                    <video className='video-file'
+                        muted
+                        loop
+                        preload="auto"
+                        autoPlay
+                        style={{
+                            opacity: sValue >= 0.6 && sValue < 0.8 ? '1' : '0'
+                        }}
+                    >
+                        <source src={movieDeck} type="video/mp4" />
+
+                    </video>
+                    <video className='video-file'
+                        muted
+                        loop
+                        preload="auto"
+                        autoPlay
+                        style={{
+                            opacity: sValue >= 0.8 && sValue < 0.9 ? '1' : '0'
+                        }}
+                    >
+                        <source src={personalProject} type="video/mp4" />
+
+                    </video>
             </div>
 
         </div>
