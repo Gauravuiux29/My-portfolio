@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo, useRef } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 
 //styles
 import './ui-projects.scss';
@@ -22,8 +22,8 @@ export default function UIProjects({ Progress }) {
     const sValue = (Progress.Progress + (Progress.Page - 4.5));
     const [frameID, setFrameID] = useState(0)
     const [itemID, setItemID] = useState(0)
-    const videoRef = useRef(null);
-    const videoRef2 = useRef(null);
+    // const videoRef = useRef(null);
+    // const videoRef2 = useRef(null);
 
 
 
@@ -43,49 +43,51 @@ export default function UIProjects({ Progress }) {
 
     }, [sValue])
 
-    useEffect(() => {
-        const videoElement = videoRef.current;
-        const videoElement2 = videoRef2.current;
+    //----------------------------------------    
+    // useEffect(() => {
+    //     const videoElement = videoRef.current;
+    //     const videoElement2 = videoRef2.current;
 
-        if (videoElement && videoElement2) {
-            // Update video source dynamically
-            const videoSource =
-                itemID === 0
-                    ? logoVideo
-                    : itemID === 1
-                        ? personalProfile
-                        : itemID === 2
-                            ? movieDeck
-                            : itemID === 3
-                                ? personalProject
-                                : "";
+    //     if (videoElement && videoElement2) {
+    //         // Update video source dynamically
+    //         const videoSource =
+    //             itemID === 0
+    //                 ? logoVideo
+    //                 : itemID === 1
+    //                     ? personalProfile
+    //                     : itemID === 2
+    //                         ? movieDeck
+    //                         : itemID === 3
+    //                             ? personalProject
+    //                             : "";
 
-            // Check if source needs updating
-            if (videoElement.src !== videoSource) {
-                videoElement.src = videoSource;
-                videoElement2.src = videoSource;
+    //         // Check if source needs updating
+    //         if (videoElement.src !== videoSource) {
+    //             videoElement.src = videoSource;
+    //             videoElement2.src = videoSource;
 
-                // Load the new video source
-                videoElement.load();
-                videoElement2.load();
+    //             // Load the new video source
+    //             videoElement.load();
+    //             videoElement2.load();
 
-                // Add event listeners to ensure the video is ready before playing
-                const handleCanPlay = () => {
-                    videoElement.play();
-                    videoElement2.play();
-                };
+    //             // Add event listeners to ensure the video is ready before playing
+    //             const handleCanPlay = () => {
+    //                 videoElement.play();
+    //                 videoElement2.play();
+    //             };
 
-                videoElement.addEventListener('canplay', handleCanPlay);
-                videoElement2.addEventListener('canplay', handleCanPlay);
+    //             videoElement.addEventListener('canplay', handleCanPlay);
+    //             videoElement2.addEventListener('canplay', handleCanPlay);
 
-                // Cleanup event listeners on unmount
-                return () => {
-                    videoElement.removeEventListener('canplay', handleCanPlay);
-                    videoElement2.removeEventListener('canplay', handleCanPlay);
-                };
-            }
-        }
-    }, [itemID]);
+    //             // Cleanup event listeners on unmount
+    //             return () => {
+    //                 videoElement.removeEventListener('canplay', handleCanPlay);
+    //                 videoElement2.removeEventListener('canplay', handleCanPlay);
+    //             };
+    //         }
+    //     }
+    // }, [itemID]);
+    //----------------------------------------
 
     useEffect(() => {
 
@@ -113,7 +115,6 @@ export default function UIProjects({ Progress }) {
 
             }}
         >
-
             <div className="bg-img"
                 style={{
                     backgroundImage: `url(${homeScreenBg})`
@@ -132,7 +133,8 @@ export default function UIProjects({ Progress }) {
                         maskImage: `url(${MaskFrame})`,
                         WebkitMaskImage: `url(${MaskFrame})`,
                         maskSize: sValue >= 0.2 && sValue < 0.9 && '800vw',
-                        transform: sValue >= 0.2 && sValue < 0.9 && 'scale(1)'
+                        WebkitMaskSize: sValue >= 0.2 && sValue < 0.9 && '800vw',
+                        transform: sValue >= 0.2 && sValue < 0.9 && 'scale(1)',
                     }}
                 >
                     <div className="slider-img">
@@ -299,54 +301,54 @@ export default function UIProjects({ Progress }) {
 
                 }}
             >
-                 <video className='video-file'
-                        muted
-                        loop
-                        preload="auto"
-                        autoPlay
-                        style={{
-                            opacity: sValue >= 0.2 && sValue < 0.4 ? '1' : '0'
-                        }}
-                    >
-                        <source src={logoVideo} type="video/mp4" />
+                <video className='video-file'
+                    muted
+                    loop
+                    preload="auto"
+                    autoPlay
+                    style={{
+                        opacity: sValue >= 0.2 && sValue < 0.4 ? '1' : '0'
+                    }}
+                >
+                    <source src={logoVideo} type="video/mp4" />
 
-                    </video>
-                    <video className='video-file'
-                        muted
-                        loop
-                        preload="auto"
-                        autoPlay
-                        style={{
-                            opacity: sValue >= 0.4 && sValue < 0.6 ? '1' : '0'
-                        }}
-                    >
-                        <source src={personalProfile} type="video/mp4" />
+                </video>
+                <video className='video-file'
+                    muted
+                    loop
+                    preload="auto"
+                    autoPlay
+                    style={{
+                        opacity: sValue >= 0.4 && sValue < 0.6 ? '1' : '0'
+                    }}
+                >
+                    <source src={personalProfile} type="video/mp4" />
 
-                    </video>
-                    <video className='video-file'
-                        muted
-                        loop
-                        preload="auto"
-                        autoPlay
-                        style={{
-                            opacity: sValue >= 0.6 && sValue < 0.8 ? '1' : '0'
-                        }}
-                    >
-                        <source src={movieDeck} type="video/mp4" />
+                </video>
+                <video className='video-file'
+                    muted
+                    loop
+                    preload="auto"
+                    autoPlay
+                    style={{
+                        opacity: sValue >= 0.6 && sValue < 0.8 ? '1' : '0'
+                    }}
+                >
+                    <source src={movieDeck} type="video/mp4" />
 
-                    </video>
-                    <video className='video-file'
-                        muted
-                        loop
-                        preload="auto"
-                        autoPlay
-                        style={{
-                            opacity: sValue >= 0.8 && sValue < 0.9 ? '1' : '0'
-                        }}
-                    >
-                        <source src={personalProject} type="video/mp4" />
+                </video>
+                <video className='video-file'
+                    muted
+                    loop
+                    preload="auto"
+                    autoPlay
+                    style={{
+                        opacity: sValue >= 0.8 && sValue < 0.9 ? '1' : '0'
+                    }}
+                >
+                    <source src={personalProject} type="video/mp4" />
 
-                    </video>
+                </video>
             </div>
 
         </div>

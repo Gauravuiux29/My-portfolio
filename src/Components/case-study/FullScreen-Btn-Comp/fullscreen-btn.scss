@@ -1,0 +1,34 @@
+.fullscreen-btn-main-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 0.5vw;
+    background-color: #000;
+
+    .fullscreen-btn {
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(156deg, rgba(0, 0, 0, 1) 51%, rgba(95, 95, 95, 1) 100%);
+        border-radius: 0.5vw;
+        background: none;
+        border: none;
+        color: #fff;
+        font-size: clamp(0.6rem, 1.5vw, 1.5rem);
+        font-weight: 300;
+        color: #0092CE;
+        letter-spacing: 0.1em;
+        //--------disabling text selection-------
+        -moz-user-select: none;
+        /* firefox */
+        -webkit-user-select: none;
+        /* Safari */
+        -ms-user-select: none;
+        /* IE*/
+        user-select: none;
+        /* Standard syntax */
+    }
+}

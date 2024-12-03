@@ -8,6 +8,8 @@ import JumpIntoJourney from './Components/jump-into-journey/Jump-Into-Journey';
 import CaseStudy from './Components/case-study/CaseStudy';
 import Typography from './Components/typography-comp/Typography';
 import UIProjects from './Components/ui-projects/UIProjects';
+import FullScreenBtn from './Components/FullScreen-Btn-Comp/fullscreen-btn';
+import PhoneRotationComp from './Components/Phone-Rotation-Comp/phone-rotation-comp';
 
 //images
 import muteIcon from './assets/mute-icon.png';
@@ -15,9 +17,32 @@ import unMuteIcon from './assets/unmute-icon.png';
 import bgAudio from './assets/bg-audio.mpeg'
 
 function App() {
+  const [isScreenSmall, setIsScreenSmall] = useState();
+
+  let mediaQuery = window.matchMedia(`(max-width: 480px)`);
+  const [query, setQuery] = useState(mediaQuery.matches);
+
+
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
+
+  useEffect(() => {
+    const handleResize = () => {
+      setQuery(mediaQuery.matches)
+
+    };
+
+    // Add resize event listener
+    window.addEventListener('resize', handleResize);
+
+    // Clean up the event listener when the component is unmounted
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+    // eslint-disable-next-line
+  }, [mediaQuery]);
+
 
   const [progress, setProgress] = useState({
     Progress: '',
@@ -71,6 +96,26 @@ function App() {
 
   return (
     <div className="App" >
+
+      <div className="full-screen-btn"
+        style={{
+          display: !isScreenSmall && 'none'
+        }}
+      >
+        <FullScreenBtn
+          IsScreenSmall={isScreenSmall}
+          SetIsScreenSmall={setIsScreenSmall}
+        />
+      </div>
+
+      <div className="phone-rotation-indication-div"
+          // onClick={handleOnLoadPhoneRotateEven}
+          style={{
+            display: !query && "none"
+          }}
+        >
+          <PhoneRotationComp />
+        </div>
 
       <div className='audio-container'>
         <audio ref={audioRef} muted loop preload="auto" >

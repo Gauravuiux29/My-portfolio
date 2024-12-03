@@ -25,6 +25,35 @@ body {
   position: relative;
   // height: 3000px;
 
+  .full-screen-btn {
+    position: fixed;
+    top: 5%;
+    right: 7%;
+    z-index: 5;
+    width: 12vw;
+    height: 3vw;
+    border-radius: 0.6vw;
+    backdrop-filter: blur(10px);
+    // border: 0.1vw solid #C8E404;
+    background: linear-gradient(152deg, rgba(0, 0, 0, 1) 19%, #0092CE 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1px;
+    // opacity: 0.4;
+    cursor: pointer;
+  }
+
+  .phone-rotation-indication-div {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 15;
+    background-color: #333;
+  }
+
   .scrollable-section {
     z-index: 1;
     width: 100%;
@@ -76,7 +105,7 @@ body {
     align-items: center;
     opacity: 0.6;
 
-    .bar-calc{
+    .bar-calc {
       position: absolute;
       left: 0%;
       bottom: 100%;

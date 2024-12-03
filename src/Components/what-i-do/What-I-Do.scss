@@ -98,11 +98,11 @@
 
             .trapezoid-style {
                 position: absolute;
-                // width: 14vw;
                 height: 35vw;
                 background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(36, 36, 36, 0.499124649859944) 100%);
                 z-index: 1;
                 transform-style: preserve-3d;
+                -webkit-transform-style: preserve-3d;
                 transform: rotateX(-55deg);
                 display: flex;
                 justify-content: center;

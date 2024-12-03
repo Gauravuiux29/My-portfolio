@@ -71,8 +71,8 @@ export default function Typography({ Progress }) {
     return (
         <div className="typography-main-container"
             style={{
-                transform: sValue >= 0 && sValue < 0.5 ? 'translateY(0%)' : 
-                sValue >= 0.5 && "translateY(-100%)"
+                transform: sValue >= 0 && sValue < 0.5 ? 'translateY(0%)' :
+                    sValue >= 0.5 && "translateY(-100%)"
 
             }}
         >
@@ -80,6 +80,7 @@ export default function Typography({ Progress }) {
                 style={{
                     maskImage: `url(${CircleBlur})`,
                     WebkitMaskImage: `url(${CircleBlur})`,
+                    maskPosition: `${coords.x - 230}px ${(coords.y - 220)}px`,
                     WebkitMaskPosition: `${coords.x - 230}px ${(coords.y - 220)}px`,
                 }}
             >
