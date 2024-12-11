@@ -7,8 +7,7 @@
     justify-content: center;
     align-items: flex-start;
     padding: 2%;
-    overflow: hidden;
-    box-sizing: border-box;
+  
 
     .frame-one {
         position: relative;
@@ -19,6 +18,7 @@
         align-items: center;
         overflow: hidden;
         border-radius: 0.8vw;
+        z-index: 0;
 
         .frame1-img {
             width: 100%;
@@ -26,5 +26,4 @@
             object-fit: cover;
         }
     }
-
 }

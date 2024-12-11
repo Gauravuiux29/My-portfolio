@@ -8,43 +8,51 @@
     align-items: flex-start;
     padding: 2%;
 
-    .frame-one {
+    a {
         position: relative;
         width: 100%;
-        height: 80%;
+        height: 100%;
         display: flex;
         justify-content: center;
-        align-items: center;
-        overflow: hidden;
-        border-radius: 0.8vw;
+        align-items: flex-start;
 
-        .frame1-img {
+        .frame-one {
+            position: relative;
             width: 100%;
-            height: 100%;
-            object-fit: cover;
+            height: 80%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            border-radius: 0.8vw;
+
+            .frame1-img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .frame-two {
+            position: absolute;
+            top: 48%;
+            width: 80%;
+            height: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            border-radius: 0.8vw;
+            padding: 1%;
+            background-color: #2e2e2e;
+            box-shadow: 1vw 1.5vw 2px #0000007a;
+
+            .frame2-img {
+                border-radius: 0.6vw;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
         }
     }
-
-    .frame-two {
-        position: absolute;
-        top: 48%;
-        width: 80%;
-        height: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        overflow: hidden;
-        border-radius: 0.8vw;
-        padding: 1%;
-        background-color: #2e2e2e;
-        box-shadow: 1vw 1.5vw 2px #0000007a;
-
-        .frame2-img {
-            border-radius: 0.6vw;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-    }
-
 }

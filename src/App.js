@@ -10,6 +10,9 @@ import Typography from './Components/typography-comp/Typography';
 import UIProjects from './Components/ui-projects/UIProjects';
 import FullScreenBtn from './Components/FullScreen-Btn-Comp/fullscreen-btn';
 import PhoneRotationComp from './Components/Phone-Rotation-Comp/phone-rotation-comp';
+import DesignExcellence from './Components/design-excellence/DesignExcellence';
+import ContactUs from './Components/contact-us/ContactUs';
+
 
 //images
 import muteIcon from './assets/mute-icon.png';
@@ -91,7 +94,7 @@ function App() {
     }
   };
 
-  const totalPages = 5; // Replace with the number of pages in your Stickyroll
+  const totalPages = 5.5; // Replace with the number of pages in your Stickyroll
   const calculatedProgress = (progress.Progress + progress.Page - 1) / totalPages;
 
   return (
@@ -109,13 +112,13 @@ function App() {
       </div>
 
       <div className="phone-rotation-indication-div"
-          // onClick={handleOnLoadPhoneRotateEven}
-          style={{
-            display: !query && "none"
-          }}
-        >
-          <PhoneRotationComp />
-        </div>
+        // onClick={handleOnLoadPhoneRotateEven}
+        style={{
+          display: !query && "none"
+        }}
+      >
+        <PhoneRotationComp />
+      </div>
 
       <div className='audio-container'>
         <audio ref={audioRef} muted loop preload="auto" >
@@ -136,6 +139,11 @@ function App() {
           display: calculatedProgress < 0 && 'none',
         }}
       >
+        <div className='black-layer'
+          style={{
+            transform: `scaleX(${calculatedProgress})`
+          }}
+        />
         <p className='bar-calc'>{Number(calculatedProgress * 100).toFixed(0)}%</p>
         <div className='bar'
           style={{
@@ -144,7 +152,7 @@ function App() {
         />
       </div>
 
-      {/* <p
+      <p
         style={{
           position: 'fixed',
           top: '0', right: '8%',
@@ -153,7 +161,8 @@ function App() {
           zIndex: '10'
         }}>
         {(progress.Progress + (progress.Page - 1))} <br />
-      </p> */}
+        {(progress.Progress + (progress.Page - 5.5))}
+      </p>
 
       {
         (progress.Progress + (progress.Page - 1)) < 1 && <SplineEmbed />
@@ -161,7 +170,7 @@ function App() {
 
       <div className='scrollable-section'>
         <Stickyroll
-          pages={5} factor={4}
+          pages={5.5} factor={4}
           onProgress={(progress, page, index) => {
             setProgress({
               Progress: progress,
@@ -175,6 +184,9 @@ function App() {
           <CaseStudy Progress={progress} />
           <Typography Progress={progress} />
           <UIProjects Progress={progress} />
+          <DesignExcellence Progress={progress} />
+          <ContactUs Progress={progress} />
+
         </Stickyroll>
       </div>
 
