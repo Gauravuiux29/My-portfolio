@@ -152,7 +152,7 @@ function App() {
         />
       </div>
 
-      <p
+      {/* <p
         style={{
           position: 'fixed',
           top: '0', right: '8%',
@@ -162,7 +162,7 @@ function App() {
         }}>
         {(progress.Progress + (progress.Page - 1))} <br />
         {(progress.Progress + (progress.Page - 5.5))}
-      </p>
+      </p> */}
 
       {
         (progress.Progress + (progress.Page - 1)) < 1 && <SplineEmbed />
