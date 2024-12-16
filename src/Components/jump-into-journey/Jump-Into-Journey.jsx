@@ -19,7 +19,8 @@ export default function JumpIntoJourney({ Progress }) {
         <div className="jump-into-journey-main-container"
             style={{
                 transform: sValue >= 0.8 && sValue < 2 ? `translateX(0)` :
-                    sValue > 2 && `translateY(-100%)`
+                    sValue > 2 && `translateY(-100%)`,
+                opacity: sValue > 2 && '0'
             }}
         >
 
@@ -40,12 +41,12 @@ export default function JumpIntoJourney({ Progress }) {
                             maskImage: `url(${MaskText})`
                         }}
                     >
-                        <img src={MaskBGImg} alt="" className="mask-bg" loading='lazy'/>
+                        <img src={MaskBGImg} alt="" className="mask-bg" loading='lazy' />
                     </div>
                 </div>
                 <div className="fr-2">
                     <div className="circle-div">
-                        <img src={CircleVector} alt="" className="vector-img" loading='lazy'/>
+                        <img src={CircleVector} alt="" className="vector-img" loading='lazy' />
                         <div className="inner-circle" />
                     </div>
                     <p>where</p>

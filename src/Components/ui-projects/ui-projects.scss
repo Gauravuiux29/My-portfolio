@@ -99,7 +99,7 @@
                 width: 120%;
                 height: 150%;
                 object-fit: contain;
-                
+
             }
 
 
@@ -119,7 +119,7 @@
     .heading {
         position: absolute;
         color: #fff;
-        top: 14%;
+        top: 13%;
         line-height: 0.9;
         letter-spacing: -0.2em;
         text-shadow: 2px 5px 4px #000000;
@@ -127,18 +127,65 @@
         transition: 0.8s ease-in-out;
         z-index: 2;
 
-        p {
+        .txt-typ1 {
             color: #DFFFBE;
             font-weight: 600;
-            font-size: 3.5vw;
+            font-size: 3.4vw;
 
         }
 
-        span {
+        .spn-typ1 {
             font-weight: 300;
-            font-size: 4.1vw;
+            font-size: 4vw;
 
         }
+
+        .txt-typ2 {
+            color: #FF1900;
+            font-weight: 600;
+            font-size: 3.5vw;
+        }
+
+        .spn-typ2 {
+            font-weight: 300;
+            font-size: 3.08vw;
+        }
+
+        .txt-typ3 {
+            color: #fff;
+            font-weight: 600;
+            font-size: 3.5vw;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 0.4em;
+
+            .span-img {
+                width: 3.5vw;
+                height: 3.5vw;
+                background-repeat: no-repeat;
+                background-size: contain;
+                margin-top: -0.25em;
+            }
+        }
+
+        .spn-typ3 {
+            font-weight: 300;
+            font-size: 2.2vw;
+        }
+
+        .txt-typ4 {
+            color: #fff;
+            font-weight: 200;
+            font-size: 3.8vw;
+        }
+        
+        .spn-typ4 {
+            color: #8222FF;
+            font-weight: 600;
+            font-size: 3.08vw;
+        }
+
     }
 
     .dark-layer {

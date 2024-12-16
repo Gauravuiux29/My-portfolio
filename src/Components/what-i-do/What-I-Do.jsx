@@ -73,22 +73,22 @@ export default function WhatIDo({ Progress }) {
 
           <div className="ui-enhancement-main"
             style={{
-              background: catagId === 1 && 'linear-gradient(0deg, #B2FF00 0%, #B2FF00 100%)'
+              background: catagId === 1 && 'linear-gradient(0deg, #DD90FF 0%, #DD90FF 100%)'
             }}
           />
           <div className="creative-problem-main"
             style={{
-              background: catagId === 2 && 'linear-gradient(0deg, #B2FF00 0%, #B2FF00 100%)'
+              background: catagId === 2 && 'linear-gradient(0deg, #DD90FF 0%, #DD90FF 100%)'
             }}
           />
           <div className="deadline-commitment-main"
             style={{
-              background: catagId === 4 && 'linear-gradient(0deg, #B2FF00 0%, #B2FF00 100%)'
+              background: catagId === 4 && 'linear-gradient(0deg, #DD90FF 0%, #DD90FF 100%)'
             }}
           />
           <div className="growth-focused-main"
             style={{
-              background: catagId === 3 && 'linear-gradient(0deg, #B2FF00 0%, #B2FF00 100%)'
+              background: catagId === 3 && 'linear-gradient(0deg, #DD90FF 0%, #DD90FF 100%)'
             }}
           />
 
@@ -138,31 +138,31 @@ export default function WhatIDo({ Progress }) {
 
           <div className="ui-enhancement-main ui-enhancement-copy"
             style={{
-              borderLeft: catagId === 1 && '1px solid #B2FF00',
-              borderRight: catagId === 1 && '1px solid #B2FF00',
+              borderLeft: catagId === 1 && '1px solid #DD90FF',
+              borderRight: catagId === 1 && '1px solid #DD90FF',
               opacity: sValue > 0.65 && 1
             }}
           />
           <div className="creative-problem-main creative-problem-copy"
             style={{
-              borderLeft: catagId === 2 && '1px solid #B2FF00',
-              borderRight: catagId === 2 && '1px solid #B2FF00',
+              borderLeft: catagId === 2 && '1px solid #DD90FF',
+              borderRight: catagId === 2 && '1px solid #DD90FF',
               opacity: sValue > 0.65 && 1
 
             }}
           />
           <div className="growth-focused-main growth-focused-copy"
             style={{
-              borderLeft: catagId === 3 && '1px solid #B2FF00',
-              borderRight: catagId === 3 && '1px solid #B2FF00',
+              borderLeft: catagId === 3 && '1px solid #DD90FF',
+              borderRight: catagId === 3 && '1px solid #DD90FF',
               opacity: sValue > 0.65 && 1
 
             }}
           />
           <div className="deadline-commitment-main deadline-commitment-copy"
             style={{
-              borderLeft: catagId === 4 && '1px solid #B2FF00',
-              borderRight: catagId === 4 && '1px solid #B2FF00',
+              borderLeft: catagId === 4 && '1px solid #DD90FF',
+              borderRight: catagId === 4 && '1px solid #DD90FF',
               opacity: sValue > 0.65 && 1
 
             }}

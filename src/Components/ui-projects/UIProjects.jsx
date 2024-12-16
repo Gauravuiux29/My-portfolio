@@ -10,6 +10,7 @@ import MaskBG1 from '../../assets/personal-profile-fr.png';
 import MaskBG2 from '../../assets/personal-project-fr.png';
 import MaskBG3 from '../../assets/movie-deck-fr.png';
 import homeScreenBg from '../../assets/Home-screen-bg.png';
+import movieIcon from '../../assets/movie-icon.png';
 
 // videos
 import personalProfile from '../../assets/personal-profile-video.mp4';
@@ -111,7 +112,8 @@ export default function UIProjects({ Progress }) {
         <div className="ui-projects-main-container"
             style={{
                 transform: sValue >= 0 && sValue < 1 ? 'translateY(0%)' :
-                    sValue >= 1 && "translateY(-100%)"
+                    sValue >= 1 && "translateY(-100%)",
+                // opacity: sValue >= 1 && '0'
 
             }}
         >
@@ -220,8 +222,32 @@ export default function UIProjects({ Progress }) {
                     opacity: sValue >= 0.2 && sValue < 0.9 && 1
                 }}
             >
-                <p>3D Logo</p>
-                <span>Design</span>
+                {
+                    sValue >= 0.2 && sValue < 0.4 ?
+
+                        <>
+                            <p className='txt-typ1'>3D Logo</p>
+                            <span className='spn-typ1'>Design</span>
+
+                        </> : sValue >= 0.4 && sValue < 0.6 ?
+
+                            <>
+                                <p className='txt-typ2'>Personalized</p>
+                                <span className='spn-typ2'>Portfolio Design</span>
+
+                            </> : sValue >= 0.6 && sValue < 0.8 ?
+
+                                <>
+                                    <p className='txt-typ3'>Movie <span className="span-img" style={{ backgroundImage: `url(${movieIcon})` }} /></p>
+                                    <span className='spn-typ3'>Pitch Deck Design</span>
+
+                                </> : sValue >= 0.8 && sValue < 0.9 &&
+
+                                <>
+                                    <p className='txt-typ4'>Alone</p>
+                                    <span className='spn-typ4'>ROBOT</span>
+                                </>
+                }
             </div>
 
             <div className="dark-layer"
