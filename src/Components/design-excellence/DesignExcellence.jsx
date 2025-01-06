@@ -4,9 +4,9 @@ import React, { useState, useEffect } from 'react';
 import './design-excellence.scss';
 
 //imgs
-import bgVector from '../../assets/wavy-background.png';
-// import lineVector from '../../assets/line-vector.png';
-import coffeeIcon from '../../assets/coffee-icon.png';
+import bgVector from 'assets/wavy-background.png';
+// import lineVector from 'assets/line-vector.png';
+import coffeeIcon from 'assets/coffee-icon.png';
 
 
 export default function DesignExcellence({ Progress }) {

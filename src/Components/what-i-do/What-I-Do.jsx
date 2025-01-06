@@ -4,12 +4,14 @@ import React, { useState, useEffect } from 'react';
 import './What-I-Do.scss';
 
 // imgs
-import WhatIDoText from '../../assets/what-i-do.png';
-import CircleOne from '../../assets/Ellipse-8.png';
-import CircleTwo from '../../assets/Ellipse-7.png';
-import CircleThree from '../../assets/Ellipse-5.png';
-import CentreCircle from '../../assets/centre-circle-frame.png';
-import RobotArm from '../../assets/Robot-Arm.png';
+// import WhatIDoText from '../../assets/what-i-do.png';
+import WhatIDoText from 'assets/what-i-do.png';
+
+import CircleOne from 'assets/Ellipse-8.png';
+import CircleTwo from 'assets/Ellipse-7.png';
+import CircleThree from 'assets/Ellipse-5.png';
+import CentreCircle from 'assets/centre-circle-frame.png';
+import RobotArm from 'assets/Robot-Arm.png';
 
 
 export default function WhatIDo({ Progress }) {

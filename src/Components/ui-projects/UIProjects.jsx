@@ -4,19 +4,19 @@ import React, { useState, useEffect, useMemo } from 'react';
 import './ui-projects.scss';
 
 //imgs
-import MaskFrame from '../../assets/mask-frame.png';
-import MaskBG from '../../assets/mask-frame2.png';
-import MaskBG1 from '../../assets/personal-profile-fr.png';
-import MaskBG2 from '../../assets/personal-project-fr.png';
-import MaskBG3 from '../../assets/movie-deck-fr.png';
-import homeScreenBg from '../../assets/Home-screen-bg.png';
-import movieIcon from '../../assets/movie-icon.png';
+import MaskFrame from 'assets/mask-frame.png';
+import MaskBG from 'assets/mask-frame2.png';
+import MaskBG1 from 'assets/personal-profile-fr.png';
+import MaskBG2 from 'assets/personal-project-fr.png';
+import MaskBG3 from 'assets/movie-deck-fr.png';
+import homeScreenBg from 'assets/Home-screen-bg.png';
+import movieIcon from 'assets/movie-icon.png';
 
 // videos
-import personalProfile from '../../assets/personal-profile-video.mp4';
-import movieDeck from '../../assets/movie-deck-video.mp4';
-import personalProject from '../../assets/personal-project-video.mp4';
-import logoVideo from '../../assets/logo-video.mp4';
+import personalProfile from 'assets/personal-profile-video.mp4';
+import movieDeck from 'assets/movie-deck-video.mp4';
+import personalProject from 'assets/personal-project-video.mp4';
+import logoVideo from 'assets/logo-video.mp4';
 
 
 export default function UIProjects({ Progress }) {

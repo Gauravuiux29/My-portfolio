@@ -4,12 +4,12 @@ import React from 'react';
 import './Jump-Into-Journey.scss';
 
 //imgs
-import MaskBGImg from '../../assets/mask-bg.png';
-import MaskText from '../../assets/text-mask.png';
-import CircleVector from '../../assets/Ellipse-15.png';
-import TriangleVector from '../../assets/triangle-vector.png';
-import Robot from '../../assets/robot.png';
-import Stage from '../../assets/stage.png';
+import MaskBGImg from 'assets/mask-bg.png';
+import MaskText from 'assets/text-mask.png';
+import CircleVector from 'assets/Ellipse-15.png';
+import TriangleVector from 'assets/triangle-vector.png';
+import Robot from 'assets/robot.png';
+import Stage from 'assets/stage.png';
 
 
 export default function JumpIntoJourney({ Progress }) {

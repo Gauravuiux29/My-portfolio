@@ -4,9 +4,9 @@ import React, { useState, useEffect, useMemo } from 'react';
 import './typography.scss';
 
 //images
-import CircleBlur from '../../assets/mask-circle.png';
-import BgGroup from '../../assets/bg-group.png';
-import MouseCursor from '../../assets/mouse-cursor.png';
+import CircleBlur from 'assets/mask-circle.png';
+import BgGroup from 'assets/bg-group.png';
+import MouseCursor from 'assets/mouse-cursor.png';
 
 
 export default function Typography({ Progress }) {

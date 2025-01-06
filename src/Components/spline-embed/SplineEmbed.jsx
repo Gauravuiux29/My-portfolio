@@ -4,7 +4,7 @@ import React, { Suspense, useCallback } from 'react';
 import './spline-embed.scss';
 
 // Assets
-import loaderGif from '../../assets/loading-gif.gif';
+import loaderGif from 'assets/loading-gif.gif';
 
 // Dynamic import for Spline to improve performance
 const Spline = React.lazy(() => import('@splinetool/react-spline'));

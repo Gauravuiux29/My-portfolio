@@ -4,8 +4,8 @@ import React from 'react';
 import './contact-us.scss';
 
 //imgs
-import lineVector from '../../assets/line-vector.png';
-import Robort from '../../assets/robot-90s.png';
+import lineVector from 'assets/line-vector.png';
+import Robort from 'assets/robot-90s.png';
 
 
 export default function ContactUs({ Progress }) {

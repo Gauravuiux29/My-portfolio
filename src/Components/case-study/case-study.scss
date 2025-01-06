@@ -24,6 +24,8 @@
         background-color: #fff;
         border-radius: 1vw;
         overflow: hidden;
+        transition: 0.2s ease-out;
+
     }
 
     .case-study-two {
@@ -33,6 +35,8 @@
         background-color: #464646;
         border-radius: 1vw;
         overflow: hidden;
+        transition: 0.2s ease-out;
+
     }
 
     .live-project-section {
@@ -45,6 +49,7 @@
         justify-content: center;
         align-items: center;
         perspective: 1000px;
+        transition: 0.2s ease-out;
 
     }
 }
