@@ -29,31 +29,57 @@
 
     }
 
-    .card-container {
+    @keyframes cardSlideKF {
+        0% {
+            transform: translate(0%);
+        }
+
+        100% {
+            transform: translate(-70%);
+        }
+
+    }
+
+    .testimonial-card-container {
         position: absolute;
         bottom: 6%;
         width: 100%;
         height: 25vw;
-        // border: 1px solid #000;
+        // border: 1px solid #000fff;
         display: flex;
         justify-content: center;
-        gap: 1vw;
         align-items: center;
+        // gap: 1vw;
         z-index: 2;
-
-        .card {
-            position: absolute;
-            min-width: 16vw;
-            height: 22vw;
-            background-color: #fff;
-            border-radius: 1.2vw;
+       
+        .inner-card-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
-            transition: 1.4s cubic-bezier(0, .02, 0, .99);
-            // transition-delay: 1.2s;
-            color: #0000006f;
-            box-shadow: 0.1vw 0.1vw 4px #00000033;
+            gap: 1vw;
+            animation: cardSlideKF 40s ease-in-out infinite alternate;
+            // animation-play-state: paused;
+    
+
+            .testimonial-card-main {
+                position: absolute;
+                min-width: 16vw;
+                height: 22vw;
+                // background-color: #fff;
+                border-radius: 1.2vw;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transition: 1.4s cubic-bezier(0, .02, 0, .99);
+                // transition-delay: 1.2s;
+                color: #0000006f;
+                box-shadow: 0.1vw 0.1vw 4px #00000033;
+                // overflow: hidden;
+            }
+
         }
     }
 
