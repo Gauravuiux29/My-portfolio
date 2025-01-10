@@ -50,7 +50,7 @@ export default function DesignExcellence({ Progress }) {
 
                 }}
             >
-                <p>Adventures In </p>
+                <p>Adventures In</p>
                 <h3>Design Excellence</h3>
             </div>
             <div className="sub-heading"
@@ -76,6 +76,7 @@ export default function DesignExcellence({ Progress }) {
                 <div className="inner-card-container"
 
                     style={{
+                        animation: sValue < 0.5 && 'none',
                         animationPlayState: isHover && 'paused',
                         WebkitAnimationPlayState: isHover && 'paused'
 
@@ -125,7 +126,7 @@ export default function DesignExcellence({ Progress }) {
 
 
                                     }}
-                                ><CardTestimonial ITEM={item}/></div>
+                                ><CardTestimonial ITEM={item} /></div>
                             )
                         })
                     }

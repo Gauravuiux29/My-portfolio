@@ -62,6 +62,10 @@
             gap: 1vw;
             animation: cardSlideKF 40s ease-in-out infinite alternate;
             // animation-play-state: paused;
+
+            // &:hover{
+            //     animation: cardSlideKF 40s ease-in-out infinite alternate;
+            // }
     
 
             .testimonial-card-main {
