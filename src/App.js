@@ -22,7 +22,7 @@ import bgAudio from './assets/bg-audio.mpeg'
 function App() {
   const [isScreenSmall, setIsScreenSmall] = useState();
 
-  let mediaQuery = window.matchMedia(`(max-width: 480px)`);
+  let mediaQuery = window.matchMedia(`(max-width: 600px)`);
   const [query, setQuery] = useState(mediaQuery.matches);
 
 
@@ -165,7 +165,7 @@ function App() {
       </p> */}
 
       {
-        (progress.Progress + (progress.Page - 1)) < 1 && <SplineEmbed />
+        (progress.Progress + (progress.Page - 1)) < 1 && <SplineEmbed Query={query}/>
       }
 
       <div className='scrollable-section'>

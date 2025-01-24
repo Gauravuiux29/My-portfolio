@@ -88,6 +88,7 @@ export default function DesignExcellence({ Progress }) {
                             return (
                                 <div
                                     className="testimonial-card-main"
+                                    key={i}
                                     onMouseOver={() => {
                                         setCardID(i)
                                         setCardDelay(true)
